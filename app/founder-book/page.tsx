@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Book, Layers, Shield, Sparkles, Feather } from "lucide-react";
+import { ArrowRight, Book, Layers, Shield, Sparkles, Feather, Film } from "lucide-react";
 import { motion } from "framer-motion";
 
 const serviceJsonLd = {
@@ -269,6 +269,84 @@ export default function FounderBook() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cinematic Documentary Option Section */}
+      <section aria-labelledby="documentary-title" className="py-24 lg:py-32 bg-background border-t border-white/5 relative overflow-hidden">
+        {/* Subtle decorative glow */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-accent/5 blur-[120px] pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+                The Living Monograph
+              </span>
+              <h2 id="documentary-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
+                Cinematic Documentary <span className="text-accent italic">Upgrade Option</span>
+              </h2>
+              <p className="text-sm text-muted font-sans font-light leading-relaxed max-w-xl">
+                Since every legacy book commission requires capturing multiple hours of high-definition oral history video interviews, our dedicated media production house offers an optional cinematic integration. We compile, edit, color-grade, and score a private, bespoke 15-to-30 minute legacy documentary film.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                {[
+                  {
+                    title: "Cinematic 4K Capture",
+                    desc: "Filmed on cinema-grade cameras with three-point studio lighting, capturing every gesture, emotion, and historical nuance in archival resolution.",
+                  },
+                  {
+                    title: "Archival Photo Animation",
+                    desc: "Our editors animate historical blueprints, family albums, and corporate records using 2.5D parallax and elegant kinetic text overlays.",
+                  },
+                  {
+                    title: "Bespoke Musical Score",
+                    desc: "Composed and licensed specifically for your film. We draft soundscapes that match the mood, triumphs, and timeline of your company.",
+                  },
+                  {
+                    title: "Private Digital Delivery",
+                    desc: "A secure, custom-branded physical crystal flash drive and an encrypted private link, preserving your legacy for future generations.",
+                  },
+                ].map((feature, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <h3 className="font-heading text-sm font-semibold text-white flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 bg-accent" />
+                      {feature.title}
+                    </h3>
+                    <p className="text-xs text-muted font-sans font-light leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Asset Showcase */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-[4/3] w-full border border-white/5 bg-secondary/40 p-3 rounded-none overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-2.5 border border-accent/15 pointer-events-none z-20" />
+                
+                <Image
+                  src="/images/cinematic_documentary.png"
+                  alt="Cinematic production set with high-end camera recording oral history interview for Imprint Legacy"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                {/* Aesthetic Play button overlay to evoke video production */}
+                <div className="absolute inset-0 flex items-center justify-center z-30">
+                  <div className="h-16 w-16 bg-background/80 backdrop-blur-md border border-accent/30 flex items-center justify-center rounded-none group-hover:scale-110 group-hover:border-accent transition-all duration-300">
+                    <Film className="h-6 w-6 text-accent" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>

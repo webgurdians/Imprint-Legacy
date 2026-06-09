@@ -91,7 +91,7 @@ export default function TermsAndConditions() {
                 4. Intellectual Property & Copyright Ownership
               </h2>
               <p>
-                We enforce clear boundary guidelines regarding proprietary content and creative creative outputs:
+                We enforce clear boundary guidelines regarding proprietary content and creative outputs:
               </p>
               <ul className="list-disc list-inside pl-4 space-y-1">
                 <li>
@@ -104,7 +104,10 @@ export default function TermsAndConditions() {
                   <strong>Recordings & Transcripts:</strong> Exclusive ownership of all biographer oral history recordings and text transcripts is transferred to the client upon completion of the draft phase, to be kept as private client archives.
                 </li>
                 <li>
-                  <strong>Future Reproduction:</strong> The client holds full future reproduction and reprint rights, enabling them to print additional copies through Imprint Legacy or any third-party printer at their sole discretion.
+                  <strong>Cinematic Documentary:</strong> If the client contracts for the Cinematic Documentary Option, full copyright ownership of the final edited film is transferred in full to the client upon receipt of the final Milestone Payment.
+                </li>
+                <li>
+                  <strong>Future Reproduction:</strong> The client holds full future reproduction and reprint rights, enabling them to print additional copies or distribute their media through Imprint Legacy or any third-party agency at their sole discretion.
                 </li>
               </ul>
             </div>
@@ -121,7 +124,7 @@ export default function TermsAndConditions() {
                   <strong>NDA Execution:</strong> A comprehensive bilateral Non-Disclosure Agreement (NDA) is executed prior to the exchange of any archives or the commencement of oral interviews.
                 </li>
                 <li>
-                  <strong>Data Handling:</strong> All raw recordings, transcript files, and drafts are hosted on secure, offline-capable encrypted local storage systems accessible only by your designated biography team.
+                  <strong>Data Handling:</strong> All raw audio recordings, transcript files, manuscript drafts, and raw video footage/recordings from documentary production are hosted on secure, offline-capable encrypted local storage systems accessible only by your designated biography and media production team.
                 </li>
               </ul>
             </div>

@@ -23,6 +23,10 @@ const applySchema = z.object({
     .enum(["true", "false"], {
       message: "Please select an option to confirm your budget compatibility.",
     }),
+  documentaryOption: z
+    .enum(["yes", "no", "undecided"], {
+      message: "Please select an option for the cinematic documentary add-on.",
+    }),
 });
 
 type ApplyFormValues = z.infer<typeof applySchema>;
@@ -252,6 +256,59 @@ export default function ApplyPage() {
                       {errors.budgetConfirmed && (
                         <p className="text-2xs text-red-500 font-sans mt-1">
                           {errors.budgetConfirmed.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="space-y-4 pt-4 border-t border-white/5">
+                      <span className="block text-2xs uppercase tracking-[0.2em] text-white font-semibold">
+                        Cinematic Documentary Option
+                      </span>
+                      <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                        Produced by our dedicated media house. Includes 4K cinematic capture of oral history interviews, historical photo animation, and a custom private score.
+                      </p>
+
+                      <div className="space-y-3 pt-2 font-sans">
+                        <label className="flex items-start gap-3 border border-white/5 bg-[#121212] p-4 cursor-pointer hover:border-accent/40 transition-colors duration-300 rounded-none">
+                          <input
+                            type="radio"
+                            value="yes"
+                            {...register("documentaryOption")}
+                            className="mt-0.5 accent-accent focus:ring-0"
+                          />
+                          <span className="text-xs text-white">
+                            Yes, include the Cinematic Film upgrade alongside physical volumes.
+                          </span>
+                        </label>
+
+                        <label className="flex items-start gap-3 border border-white/5 bg-[#121212] p-4 cursor-pointer hover:border-accent/40 transition-colors duration-300 rounded-none">
+                          <input
+                            type="radio"
+                            value="no"
+                            {...register("documentaryOption")}
+                            className="mt-0.5 accent-accent focus:ring-0"
+                          />
+                          <span className="text-xs text-white">
+                            No, we prefer physical volumes only.
+                          </span>
+                        </label>
+
+                        <label className="flex items-start gap-3 border border-white/5 bg-[#121212] p-4 cursor-pointer hover:border-accent/40 transition-colors duration-300 rounded-none">
+                          <input
+                            type="radio"
+                            value="undecided"
+                            {...register("documentaryOption")}
+                            className="mt-0.5 accent-accent focus:ring-0"
+                          />
+                          <span className="text-xs text-white">
+                            Undecided (Discuss options during strategy phase).
+                          </span>
+                        </label>
+                      </div>
+
+                      {errors.documentaryOption && (
+                        <p className="text-2xs text-red-500 font-sans mt-1">
+                          {errors.documentaryOption.message}
                         </p>
                       )}
                     </div>
