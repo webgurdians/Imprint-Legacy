@@ -163,29 +163,42 @@ export default function Home() {
               {
                 title: "90-Year Textile Conglomerate",
                 region: "Gujarat, India",
-                scope: "Restored and digitized 90 years of hand-woven blueprints, ledger books, and correspondence. Conducted oral histories with 12 family elders to publish a definitive 400-page leather-bound history.",
+                trigger: "Fourth-Gen Succession",
+                scope: "Triggered by a transition to fourth-generation leadership, this commission preserved the family's founding values from 1936. We restored and digitized 90 years of hand-woven textile blueprints, early ledger books, and correspondence, conducting oral history interviews with 12 family elders to author a definitive 400-page dynastic chronicle.",
+                specs: "24-Week Commission • 5 Hand-Bound Leather Volumes • Silk Clamshells"
               },
               {
                 title: "Unicorn Infrastructure Pioneer",
                 region: "Bangalore, India",
-                scope: "Commissioned a 5-volume monograph and a 30-minute cinematic video documenting their growth from a single excavating team to a national transport contractor.",
+                trigger: "IPO Roadshow & Onboarding",
+                scope: "Triggered by IPO preparations and rapid executive onboarding, this commission captured the founders' legendary growth arc from a single-excavator construction team in 2004 to a national transport infrastructure force. We recorded 18 oral histories from early builders and digitized engineering diaries to write a 220-page linen monograph codifying the operational values that built their enterprise.",
+                specs: "20-Week Commission • 5 Linen-Bound Volumes • Cinematic Video Option"
               },
               {
                 title: "Centennial Real Estate Dynasty",
                 region: "Kolkata, India",
-                scope: "Compiled letters, architectural maps, and historical land deeds into a permanent public archive and commemorative monograph celebrating their centenary.",
+                trigger: "Centenary Celebration",
+                scope: "Timed with their centennial anniversary, this commission established an authoritative heritage archive and monograph. We digitized over 800 historical land deeds, early architectural maps, and correspondence, recording oral histories with 15 retired chief engineers to document their defining impact on the city's architectural skyline.",
+                specs: "28-Week Commission • 5 Premium Fabric Volumes • Archive Drive Delivery"
               },
             ].map((cs, idx) => (
-               <div key={idx} className="border border-white/5 bg-background/40 p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-3">
-                 <span className="text-[10px] uppercase tracking-widest text-accent font-semibold block">
-                   {cs.region}
-                 </span>
-                 <h4 className="font-heading text-lg font-medium text-white tracking-wide">
-                   {cs.title}
-                 </h4>
-                 <p className="text-xs leading-relaxed text-muted font-sans font-light">
-                   {cs.scope}
-                 </p>
+               <div key={idx} className="border border-white/5 bg-background/40 p-8 rounded-none hover:border-accent/20 transition-all duration-300 flex flex-col justify-between space-y-6">
+                 <div className="space-y-3">
+                   <div className="flex justify-between items-center text-[10px] uppercase tracking-widest text-accent font-semibold">
+                     <span>{cs.region}</span>
+                     <span className="text-white/40 font-light">&bull; {cs.trigger}</span>
+                   </div>
+                   <h4 className="font-heading text-lg font-medium text-white tracking-wide">
+                     {cs.title}
+                   </h4>
+                   <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                     {cs.scope}
+                   </p>
+                 </div>
+                 
+                 <div className="pt-4 border-t border-white/5 text-[10px] uppercase tracking-wider text-accent font-medium font-sans">
+                   {cs.specs}
+                 </div>
                </div>
             ))}
           </div>
