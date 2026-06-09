@@ -13,7 +13,7 @@ const serviceJsonLd = {
   "provider": {
     "@id": "https://imprintlegacy.in/#organization"
   },
-  "description": "A premium, Smyth-sewn hardcover narrative book documenting corporate origin stories, turning points, and vision for founders and enterprise leaders.",
+  "description": "A premium, Smyth-sewn hardcover narrative book. Designed as a luxury, high-prestige institutional gift for board members, enterprise partners, and key stakeholders.",
   "category": "Corporate Publishing",
   "offers": {
     "@type": "Offer",

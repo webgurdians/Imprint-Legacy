@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "Family business archive",
     "High-ticket publishing commission",
     "Archival corporate memoirs",
+    "premium gifts for board members",
+    "prestige corporate gifts",
+    "executive stakeholder gifting",
+    "luxury corporate gifting alternative",
+    "unique high-end corporate gifts",
   ],
   authors: [{ name: "Imprint Legacy" }],
   verification: {
@@ -69,7 +74,7 @@ const orgJsonLd = {
       "name": "Imprint Legacy",
       "url": "https://imprintlegacy.in",
       "logo": "https://imprintlegacy.in/logo.png",
-      "description": "India's premier Corporate Legacy Publisher. We transform the history and triumphs of industry-defining companies into premium, physical books.",
+      "description": "India's premier Corporate Legacy Publisher. We compile bespoke monographs, offering an exclusive, high-prestige gifting alternative for board members, key stakeholders, and VIP clients.",
       "founder": {
         "@type": "Person",
         "name": "Bijoy Sen",
