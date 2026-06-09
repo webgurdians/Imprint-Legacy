@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Book, Layers, Shield, Sparkles, Feather, Film } from "lucide-react";
+import { ArrowRight, Book, Layers, Shield, Sparkles, Feather, Film, Share2, TrendingUp, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 const serviceJsonLd = {
@@ -347,6 +347,74 @@ export default function FounderBook() {
               </div>
             </div>
             
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Utility Section */}
+      <section aria-labelledby="utility-title" className="py-24 lg:py-32 bg-secondary border-t border-white/5 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 blur-[120px] pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+              Market Impact
+            </span>
+            <h2 id="utility-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
+              Strategic Utility: <span className="text-accent italic">Beyond the Archive</span>
+            </h2>
+            <p className="text-xs text-muted max-w-lg mx-auto font-sans leading-relaxed">
+              An Imprint Legacy commission is more than a historical record. It is an active instrument for authority positioning, public relations, and institutional trust.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                title: "PR & Media Catalyst",
+                desc: "Serves as the verified foundation for anniversary campaigns, national press features, and founder profiles, ensuring editorial consistency.",
+                icon: Share2,
+              },
+              {
+                title: "Investor & IPO Relations",
+                desc: "An institutional-grade gift for investment bankers, board members, and key stakeholders that projects stability, governance, and long-term vision.",
+                icon: TrendingUp,
+              },
+              {
+                title: "Authority Positioning",
+                desc: "A physical proof of lifetime achievement, facilitating appointments to advisory boards, government panels, or keynote speaking invitations.",
+                icon: Award,
+              },
+              {
+                title: "Generational Alignment",
+                desc: "Codifies the founder's values and operational philosophy, serving as a cornerstone for family office governance and successor onboarding.",
+                icon: Users,
+              },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="border border-white/5 bg-background p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-4 flex flex-col justify-between"
+                >
+                  <div className="space-y-4">
+                    <div className="flex h-10 w-10 items-center justify-center border border-accent/20 bg-accent/5 mb-2">
+                      <Icon className="h-4.5 w-4.5 text-accent stroke-[1.2]" />
+                    </div>
+                    <h3 className="font-heading text-base font-medium text-white tracking-wide">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
