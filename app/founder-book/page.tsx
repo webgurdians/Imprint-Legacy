@@ -456,8 +456,8 @@ export default function FounderBook() {
               {
                 name: "Bijoy Sen (Neel)",
                 role: "Creative Director & Lead Biographer",
-                credentials: "Former Business Journalist & Publisher",
-                bio: "With over 18 years documenting India's industrial transformations, Bijoy leads editorial curation for every monograph, matching narrative voice with your corporate values.",
+                credentials: "Former Industrial Editor, Business India & Author",
+                bio: "Formerly a senior business editor and industrial beat head at Business India, Bijoy has spent 18 years documenting India's liberalization history. He has authored private monographs for three Forbes-listed manufacturing patriarchs.",
               },
               {
                 name: "Rishita Saha",
