@@ -466,10 +466,10 @@ export default function FounderBook() {
                 bio: "Meera leads our research team in scanning and restoring legacy corporate records, cataloging corporate assets, and verifying historical facts to ensure museum-grade accuracy.",
               },
               {
-                name: "Siddharth Roy",
+                name: "Prasenjit Dutta",
                 role: "Director of Cinema Production",
-                credentials: "National-Award Winning Documentarian",
-                bio: "Siddharth oversees cinematic oral history interviews. His media production house compiles high-definition video archives and directs the Cinematic Documentary Option.",
+                credentials: "Established Documentary Director & Film Fellow",
+                bio: "Prasenjit oversees cinematic oral history interviews. His media production house compiles high-definition video archives and directs the Cinematic Documentary Option.",
               },
             ].map((member, idx) => (
               <div key={idx} className="border border-white/5 bg-secondary/20 p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-4">
