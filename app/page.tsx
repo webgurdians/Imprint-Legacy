@@ -1,34 +1,35 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, ShieldCheck, Award, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, BookOpen, ShieldCheck, Award } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   const faqs = [
     {
-      question: "Who writes and compiles the corporate monographs?",
-      answer: "We deploy a dedicated team of senior business biographers, oral historians, and research archivists. They conduct structured in-person interviews and index corporate records, catalogs, and media archives to write the narrative.",
+      question: "Who conducts the interviews and writes the manuscript?",
+      answer: "We deploy senior corporate biographers, oral historians, and research archivists matching your industry background. Every team lead has at least 15 years of narrative non-fiction or business journalism credentials. You meet and approve your lead biographer before research commences.",
     },
     {
-      question: "What is the typical timeline for a publishing commission?",
-      answer: "A standard monograph commission takes between 6 to 9 months. This timeline accounts for comprehensive oral history capture, archival research, copy editing, layout design, and hand-finished physical binding.",
+      question: "How strictly is confidentiality governed?",
+      answer: "Every project is bound by a strict bilateral NDA executed prior to the exchange of any records or oral interviews. Drafts, transcript files, and raw video footage are hosted on secure, offline-capable encrypted local storage systems. No portion of the text is ever shared, indexed, or publicized without explicit written board clearance.",
     },
     {
-      question: "How do you handle confidentiality and sensitive trade secrets?",
-      answer: "We govern all projects under strict, legally binding corporate NDAs. Drafts are held on secure private directories, and under no circumstances is any portion of the monograph shared publicly without explicit written board clearance.",
+      question: "What is the typical timeline and client time commitment?",
+      answer: "A standard monograph commission takes between 24 and 28 weeks. The primary founder or subject is asked for 10 to 40 hours of interview time, which can be scheduled over several weeks. All other research, archive scanning, indexing, drafting, and binding is managed entirely by our team.",
     },
     {
-      question: "Can we request additional book copies for distribution?",
-      answer: "Yes. While a standard commission includes five bespoke, leather-bound archival volumes in custom clamshell cases, we can organize additional print runs (both luxury and standard linen finishes) for partners or stakeholders.",
+      question: "How does the pricing compare to other brand initiatives?",
+      answer: "Bespoke commissions begin at ₹75,000. Unlike recurring agency fees (e.g., a standard PR agency retainer that expires monthly), a legacy monograph is a permanent, capital-yielding asset that codifies your thought leadership, corporate memory, and investor trust for over 200 years.",
     },
     {
-      question: "Do you collaborate with international organizations?",
-      answer: "Yes. Our editorial and archive research teams are fully equipped to travel internationally to conduct oral histories and secure key physical archives directly at your global offices.",
+      question: "Can we request additional hand-bound volumes or paper reprints?",
+      answer: "Yes. While a standard commission includes five (5) custom-bound leather volumes in silk clamshell cases, we maintain your digital archives and print plates securely. You retain the right to print additional volumes through Imprint Legacy or any third-party printer at your sole discretion.",
+    },
+    {
+      question: "Who holds copyright ownership of the finished works?",
+      answer: "You do. While Imprint Legacy retains authority on matters of typesetting and binding aesthetics, complete copyright ownership of the compiled narrative manuscript, digitized archives, and the edited cinematic documentary is transferred in full to your company upon receipt of the final milestone payment.",
     },
   ];
 
@@ -133,8 +134,8 @@ export default function Home() {
                 
                 {/* Premium tag overlay */}
                 <div className="absolute bottom-6 left-6 right-6 z-25 text-left">
-                  <p className="font-heading text-lg font-bold text-white tracking-wider">The Harvard & Co. Legacy</p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-accent mt-1">Archival Case Study monograph</p>
+                  <p className="font-heading text-lg font-bold text-white tracking-wider">The Singhania Legacy Monograph</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-accent mt-1">Archival Case Study Monograph</p>
                 </div>
               </div>
             </motion.div>
@@ -142,19 +143,54 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Social Proof Ribbon */}
-      <aside aria-label="Social Proof" className="bg-secondary border-y border-white/5 py-8 relative overflow-hidden">
+      {/* Anonymized Social Proof / Case Studies */}
+      <section aria-labelledby="case-studies-heading" className="bg-secondary border-y border-white/5 py-16 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-accent font-semibold">
-              Trusted By Distinguished Leaders
+          <div className="max-w-3xl mb-12">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block mb-2">
+              Archival Case Studies
             </span>
-            <p className="text-sm font-light text-muted tracking-wide md:max-w-2xl">
-              Serving Tech Founders, 2nd Gen Family Businesses, and Enterprise Leaders who demand institutional-quality historical record preservation.
+            <h3 id="case-studies-heading" className="font-heading text-2xl sm:text-3xl font-light text-white tracking-tight">
+              Proven Records: <span className="text-accent italic font-normal">Anonymized for NDA Compliance</span>
+            </h3>
+            <p className="text-xs text-muted max-w-xl font-sans mt-2 leading-relaxed">
+              Due to strict confidentiality covenants, names are modified or generalized, but these reflect actual corporate and family office commissions executed by our biographers.
             </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "90-Year Textile Conglomerate",
+                region: "Gujarat, India",
+                scope: "Restored and digitized 90 years of hand-woven blueprints, ledger books, and correspondence. Conducted oral histories with 12 family elders to publish a definitive 400-page leather-bound history.",
+              },
+              {
+                title: "Unicorn Infrastructure Pioneer",
+                region: "Bangalore, India",
+                scope: "Commissioned a 5-volume monograph and a 30-minute cinematic video documenting their growth from a single excavating team to a national transport contractor.",
+              },
+              {
+                title: "Centennial Real Estate Dynasty",
+                region: "Kolkata, India",
+                scope: "Compiled letters, architectural maps, and historical land deeds into a permanent public archive and commemorative monograph celebrating their centenary.",
+              },
+            ].map((cs, idx) => (
+               <div key={idx} className="border border-white/5 bg-background/40 p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-3">
+                 <span className="text-[10px] uppercase tracking-widest text-accent font-semibold block">
+                   {cs.region}
+                 </span>
+                 <h4 className="font-heading text-lg font-medium text-white tracking-wide">
+                   {cs.title}
+                 </h4>
+                 <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                   {cs.scope}
+                 </p>
+               </div>
+            ))}
+          </div>
         </div>
-      </aside>
+      </section>
 
       {/* Philosophy Section / Three Columns */}
       <section aria-labelledby="philosophy-title" className="py-24 lg:py-32 relative bg-background">
@@ -263,56 +299,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Editorial FAQ Section */}
       <section aria-labelledby="faq-title" className="py-24 lg:py-32 relative bg-[#0D0D0D] border-t border-white/5">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.01)_0%,transparent_100%)] pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
-              Inquiries & Process
+              Inquiries & Frameworks
             </span>
             <h2 id="faq-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
-              Frequently Asked <span className="text-accent italic">Questions</span>
+              Bespoke Commission <span className="text-accent italic font-normal">FAQ</span>
             </h2>
+            <p className="text-xs text-muted max-w-lg mx-auto font-sans leading-relaxed">
+              Below we address the operational, security, and editorial standards expected of a high-ticket publishing registry.
+            </p>
           </div>
 
-          <div className="space-y-6 font-sans">
-            {faqs.map((faq, idx) => {
-              const isOpen = openFaq === idx;
-              return (
-                <div key={idx} className="border-b border-white/5 pb-6">
-                  <button
-                    onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="flex w-full items-center justify-between text-left focus:outline-none group"
-                  >
-                    <span className="text-sm font-medium text-white group-hover:text-accent transition-colors duration-300">
-                      {faq.question}
-                    </span>
-                    <span className="ml-6 flex h-7 items-center">
-                      <ChevronDown
-                        className={`h-4 w-4 text-accent transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </span>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <p className="mt-4 text-xs leading-relaxed text-muted font-light">
-                          {faq.answer}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-sans">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="space-y-3">
+                <h3 className="font-heading text-base font-medium text-white tracking-wide flex items-start gap-3">
+                  <span className="text-accent text-sm font-semibold pt-0.5">0{idx + 1}.</span>
+                  {faq.question}
+                </h3>
+                <p className="text-xs leading-relaxed text-muted font-light pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

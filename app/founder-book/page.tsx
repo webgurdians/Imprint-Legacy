@@ -482,8 +482,65 @@ export default function FounderBook() {
         </div>
       </section>
 
+      {/* Intake & Acceptance Criteria */}
+      <section aria-labelledby="criteria-title" className="py-24 lg:py-32 bg-secondary border-t border-white/5 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-6 space-y-6">
+              <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+                Admissions Policy
+              </span>
+              <h2 id="criteria-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
+                A Curation Registry, <br />
+                <span className="text-accent italic font-normal">Not a Production Line</span>
+              </h2>
+              <p className="text-xs text-muted leading-relaxed font-sans font-light">
+                To maintain absolute historical accuracy and museum-grade hand-binding standards, Imprint Legacy accepts exactly four (4) corporate commissions per fiscal quarter. We review applicants strictly against our intake guidelines:
+              </p>
+              
+              <div className="space-y-4 pt-2">
+                {[
+                  {
+                    title: "1. Operational Heritage",
+                    desc: "We prioritize enterprises with 20+ years of operating history, or family offices that have successfully transitioned across at least two generations.",
+                  },
+                  {
+                    title: "2. Strategic Milestones",
+                    desc: "We look for projects timed alongside transitional events—such as IPO preparations, centennials, founder retirements, or leadership successions.",
+                  },
+                  {
+                    title: "3. Direct Executive Access",
+                    desc: "The primary subject or leadership team must commit 10 to 40 hours for oral history capture. We do not write biographies from public domain sources alone.",
+                  },
+                ].map((c, idx) => (
+                  <div key={idx} className="border-l-2 border-accent/20 pl-4 py-1 hover:border-accent transition-colors duration-300">
+                    <h3 className="font-heading text-sm font-medium text-white">{c.title}</h3>
+                    <p className="text-2xs text-muted font-sans font-light mt-1">{c.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 border border-white/5 bg-background p-8 sm:p-12 space-y-6">
+               <h3 className="font-heading text-xl font-light text-white">How the Commission Invitation Works</h3>
+               <ol className="space-y-4 font-sans text-xs text-muted font-light list-decimal list-inside">
+                 <li>
+                   <strong className="text-white font-medium">Registry Intake:</strong> Submit your organization details, key milestones, and preferred upgrade options (e.g. Cinematic Documentary) through our `/apply` portal.
+                 </li>
+                 <li>
+                   <strong className="text-white font-medium">Initial Feasibility:</strong> Our Creative Director reviews the application for archive availability and milestones. We schedule a 30-minute strategic consultation.
+                 </li>
+                 <li>
+                   <strong className="text-white font-medium">Bilateral NDA & Proposal:</strong> We execute a formal mutual NDA prior to issuing a detailed project proposal, chapter outline, and milestone contract.
+                 </li>
+               </ol>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* Investment Block (Filter Lead) */}
-      <section className="py-20 lg:py-28 bg-secondary border-t border-white/5 relative">
+      <section className="py-20 lg:py-28 bg-background border-t border-white/5 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent pointer-events-none" />
         
         <div className="mx-auto max-w-4xl px-6 lg:px-8 relative z-10">
@@ -492,7 +549,7 @@ export default function FounderBook() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="border-2 border-accent/40 bg-background p-10 sm:p-14 rounded-none text-center space-y-6 shadow-[0_0_50px_rgba(197,160,89,0.05)]"
+            className="border-2 border-accent/40 bg-secondary p-10 sm:p-14 rounded-none text-center space-y-6 shadow-[0_0_50px_rgba(197,160,89,0.05)]"
           >
             <Sparkles className="h-8 w-8 text-accent mx-auto stroke-[1.2]" />
             
@@ -506,7 +563,7 @@ export default function FounderBook() {
             </h3>
             
             <p className="text-xs text-muted max-w-md mx-auto leading-relaxed font-sans font-light">
-              This includes complete biographical interviewing, historical document indexing, professional editorial review, layout design, and the binding of five hand-crafted archival copies. Further bespoke specifications will be priced accordingly.
+              An heirloom commission is a permanent investment in brand capital—costing less than a single month of a premium PR retainer or a fraction of corporate gifting budgets, while preserving your leadership legacy and stakeholder trust for over two centuries.
             </p>
             
             <div className="pt-6">
