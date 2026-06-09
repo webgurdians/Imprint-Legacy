@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.imprintlegacy.in/founder-book/#service",
+  "@id": "https://imprintlegacy.in/founder-book/#service",
   "name": "The Founder Legacy Book",
   "provider": {
-    "@id": "https://www.imprintlegacy.in/#organization"
+    "@id": "https://imprintlegacy.in/#organization"
   },
   "description": "A premium, Smyth-sewn hardcover narrative book documenting corporate origin stories, turning points, and vision for founders and enterprise leaders.",
   "category": "Corporate Publishing",
@@ -20,7 +20,7 @@ const serviceJsonLd = {
     "priceCurrency": "INR",
     "price": "75000",
     "availability": "https://schema.org/LimitedAvailability",
-    "url": "https://www.imprintlegacy.in/apply",
+    "url": "https://imprintlegacy.in/apply",
     "name": "Corporate Legacy Commission - Base Tier"
   }
 };
@@ -136,7 +136,7 @@ export default function FounderBook() {
                   alt="Founder Legacy Book detailed texture and binding closeup view"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-103"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </motion.div>

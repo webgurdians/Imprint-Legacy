@@ -137,7 +137,7 @@ export default function ApplyPage() {
                         id="organizationName"
                         placeholder="e.g. Singhania Industries, CloudCore Inc."
                         {...register("organizationName")}
-                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans"
+                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder:text-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans"
                       />
                       {errors.organizationName && (
                         <p className="text-2xs text-red-500 font-sans mt-1">
@@ -158,7 +158,7 @@ export default function ApplyPage() {
                         id="primarySubject"
                         placeholder="e.g. The Founder's Biography, Company's 50-Year Anniversary"
                         {...register("primarySubject")}
-                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans"
+                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder:text-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans"
                       />
                       {errors.primarySubject && (
                         <p className="text-2xs text-red-500 font-sans mt-1">
@@ -194,7 +194,7 @@ export default function ApplyPage() {
                         rows={5}
                         placeholder="Detail the timeline, key pivots, and legacy objectives..."
                         {...register("legacyMilestone")}
-                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans resize-none"
+                        className="w-full bg-[#121212] border border-white/10 px-4 py-3 text-xs text-white placeholder:text-muted focus:border-accent focus:outline-none transition-all duration-300 rounded-none font-sans resize-none"
                       />
                       {errors.legacyMilestone && (
                         <p className="text-2xs text-red-500 font-sans mt-1">

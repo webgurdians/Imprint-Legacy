@@ -94,7 +94,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="md:hidden border-t border-white/5 bg-secondary-bg"
+            className="md:hidden border-t border-white/5 bg-secondary"
           >
             <div className="space-y-1 px-6 py-6 pb-8 bg-[#121212] border-b border-white/5">
               {links.map((link) => {

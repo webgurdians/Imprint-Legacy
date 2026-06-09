@@ -17,6 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://imprintlegacy.in"),
   title: "Imprint Legacy | B2B Corporate Legacy & Autobiography Publishing",
   description:
     "We transform the history, triumphs, and defining moments of corporate dynasties and industry-defining founders into premium, physical books. Commissions start at ₹75,000.",
@@ -29,6 +30,30 @@ export const metadata: Metadata = {
     "Archival corporate memoirs",
   ],
   authors: [{ name: "Imprint Legacy" }],
+  openGraph: {
+    title: "Imprint Legacy | B2B Corporate Legacy & Autobiography Publishing",
+    description:
+      "We transform the history, triumphs, and defining moments of corporate dynasties and industry-defining founders into premium, physical books.",
+    url: "https://imprintlegacy.in",
+    siteName: "Imprint Legacy",
+    images: [
+      {
+        url: "/images/luxury_corporate_book.png",
+        width: 1200,
+        height: 630,
+        alt: "Premium leather-bound corporate legacy book volume cover mockup",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imprint Legacy | B2B Corporate Legacy & Autobiography Publishing",
+    description:
+      "We transform the history, triumphs, and defining moments of corporate dynasties and industry-defining founders into premium, physical books.",
+    images: ["/images/luxury_corporate_book.png"],
+  },
 };
 
 const orgJsonLd = {
@@ -36,10 +61,10 @@ const orgJsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.imprintlegacy.in/#organization",
+      "@id": "https://imprintlegacy.in/#organization",
       "name": "Imprint Legacy",
-      "url": "https://www.imprintlegacy.in",
-      "logo": "https://www.imprintlegacy.in/logo.png",
+      "url": "https://imprintlegacy.in",
+      "logo": "https://imprintlegacy.in/logo.png",
       "description": "India's premier Corporate Legacy Publisher. We transform the history and triumphs of industry-defining companies into premium, physical books.",
       "founder": {
         "@type": "Person",
@@ -55,11 +80,11 @@ const orgJsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.imprintlegacy.in/#website",
-      "url": "https://www.imprintlegacy.in",
+      "@id": "https://imprintlegacy.in/#website",
+      "url": "https://imprintlegacy.in",
       "name": "Imprint Legacy",
       "publisher": {
-        "@id": "https://www.imprintlegacy.in/#organization"
+        "@id": "https://imprintlegacy.in/#organization"
       }
     }
   ]

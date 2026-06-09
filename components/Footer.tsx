@@ -62,7 +62,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-3">
                   <li>
                     <span className="text-xs text-muted">
-                      New Delhi & Mumbai, India
+                      Kolkata, India
                     </span>
                   </li>
                   <li>

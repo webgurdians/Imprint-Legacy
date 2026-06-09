@@ -57,7 +57,7 @@ export default function CaseStudies() {
     <div className="flex flex-col min-h-screen bg-background text-white">
       {/* Header */}
       <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary via-background to-background border-b border-white/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center max-w-3xl mx-auto space-y-6">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center space-y-6">
           <motion.div initial="hidden" animate="visible" custom={0} variants={fadeIn}>
             <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold">
               Archival Briefings
