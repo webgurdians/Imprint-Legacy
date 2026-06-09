@@ -20,7 +20,7 @@ const caseStudiesJsonLd = {
     {
       "@type": "ItemList",
       "name": "Imprint Legacy Monograph Case Studies",
-      "numberOfItems": 2,
+      "numberOfItems": 3,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -65,6 +65,28 @@ const caseStudiesJsonLd = {
               }
             }
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "headline": "The Heritage Centennial Monograph",
+            "alternativeHeadline": "Documenting a Century of Iconic Architecture and Historical Trust",
+            "description": "Digitizing 800+ legacy blueprints, maps, and land deeds while recording 15 chief engineer interviews for a public heritage archive.",
+            "author": {
+              "@type": "Organization",
+              "name": "Imprint Legacy"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Imprint Legacy",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://imprintlegacy.in/logo.png"
+              }
+            }
+          }
         }
       ]
     }
@@ -90,6 +112,10 @@ export default function CaseStudies() {
         "We deployed a dedicated archival team of two business biographers and one corporate archivist. Over nine months, we conducted 42 comprehensive interviews, digitized 1,200 physical letters, blueprints, and archival ledgers, and curated a master leather-bound monograph.",
       impact:
         "The resulting book is now required reading for all incoming family board members and executive leaders. It successfully resolved a critical governance debate by codifying the founder's original partnership ethos.",
+      quote: {
+        text: "We had ninety years of records in metal trunks, but no unified story. Imprint Legacy didn't just digitize documents; they gave us our constitution.",
+        author: "Vijay Singhania, Chairman",
+      },
     },
     {
       id: "cs-2",
@@ -108,6 +134,32 @@ export default function CaseStudies() {
         "We focused on the founder's early years: the three near-death experiences of the company, the original codebase pivot in 2012, and early team photographs. The narrative was designed with a modern typography aesthetic and high-resolution tech archives.",
       impact:
         "A physical copy is presented to every key customer account and partner, boosting brand equity. Additionally, a softcover internal edition is given to every engineer upon hiring, maintaining high cultural integrity across global hubs.",
+      quote: {
+        text: "Scaling from 10 to 1,000 employees dilutes company values. Gifting this linen volume to every engineer preserves our early days of grit.",
+        author: "Raghav Varma, Founder & CEO",
+      },
+    },
+    {
+      id: "cs-3",
+      tag: "Heritage Centenary Archiving",
+      title: "The Heritage Centennial Monograph",
+      subtitle: "Documenting a Century of Iconic Architecture and Historical Trust",
+      meta: {
+        industry: "Real Estate & Architecture",
+        scope: "300-Page Premium Fabric Monograph",
+        interviews: "15 Chief Engineer Oral Histories",
+        timeline: "7 Months of Research",
+      },
+      challenge:
+        "A historic real estate group with a century of building landmark architecture lacked a unified record of their blueprints, historical maps, and land deeds, risking legal and historical disputes.",
+      solution:
+        "Digitized and restored 800+ historical maps, architectural blueprints, and correspondence, and conducted oral history interviews with 15 retired chief engineers and family directors.",
+      impact:
+        "Presented to municipal boards, heritage agencies, and key institutional partners, establishing the company as the absolute custodian of the city's architectural legacy.",
+      quote: {
+        text: "This volume sits in our main boardroom. It has become our ultimate credential when pitch-proposing landmark city restoration projects.",
+        author: "Anirudh Roy, Managing Director",
+      },
     },
   ];
 
@@ -225,6 +277,14 @@ export default function CaseStudies() {
                   <p>{cs.impact}</p>
                 </div>
               </div>
+
+              {/* Quote Block */}
+              {cs.quote && (
+                <div className="mt-8 pt-6 border-t border-white/5 text-left pl-4 border-l-2 border-accent/40 italic font-sans font-light text-muted">
+                  <p className="text-xs text-white">"{cs.quote.text}"</p>
+                  <span className="text-[10px] uppercase tracking-widest text-accent font-semibold block mt-2">— {cs.quote.author}</span>
+                </div>
+              )}
 
               {/* Call to Action */}
               <div className="mt-8 pt-6 border-t border-white/5 flex justify-end">

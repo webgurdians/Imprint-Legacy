@@ -30,25 +30,41 @@ export default function FounderBook() {
     {
       title: "Binding",
       value: "Traditional Smyth-Sewn",
-      description: "Lie-flat construction using reinforced cotton stitching. Built for multi-generational handling and museum-grade durability.",
+      description: (
+        <>
+          <strong>Lie-flat construction</strong> utilizing reinforced cotton stitching. Built for <strong>multi-generational handling</strong> and museum-grade conservation.
+        </>
+      ),
       icon: Layers,
     },
     {
       title: "Paper Stock",
       value: "150 GSM Archival Ivory",
-      description: "Acid-free, pH-neutral cotton-blend stock. Guaranteed against yellowing, degradation, or ink bleeding for over two centuries.",
+      description: (
+        <>
+          <strong>Acid-free, pH-neutral cotton-blend stock</strong> (150 GSM). Guaranteed against <strong>yellowing or ink bleeding</strong> for over 200 years.
+        </>
+      ),
       icon: Feather,
     },
     {
       title: "Exterior Cover",
       value: "Full-Grain Italian Leather / Premium Linen",
-      description: "Hand-wrapped boards featuring debossed details and hot-stamped gold foil leaf. Choice of bespoke grain textures.",
+      description: (
+        <>
+          <strong>Hand-wrapped boards</strong> in full-grain Italian leather or premium linen. Features debossed detailing and hot-stamped <strong>gold foil leaf</strong>.
+        </>
+      ),
       icon: Book,
     },
     {
       title: "Curation & Slipcase",
       value: "Custom Protective Clamshell Box",
-      description: "Individually sized presentation slipcase lined with archival Japanese silk to protect against dust, humidity, and wear.",
+      description: (
+        <>
+          <strong>Individually sized clamshell box</strong> lined with Japanese archival silk. Protects against dust, humidity, and atmospheric wear.
+        </>
+      ),
       icon: Shield,
     },
   ];
@@ -419,6 +435,64 @@ export default function FounderBook() {
         </div>
       </section>
 
+      {/* Leadership & Editorial Board Section */}
+      <section aria-labelledby="board-title" className="py-24 lg:py-32 bg-background border-t border-white/5 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-accent/3 blur-[120px] pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+              Editorial Board
+            </span>
+            <h2 id="board-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
+              Whose Hands Your <span className="text-accent italic">Legacy is In</span>
+            </h2>
+            <p className="text-xs text-muted max-w-lg mx-auto font-sans leading-relaxed">
+              Every commission is authored, researched, and directed by established figures in journalism, historical archiving, and cinema.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              {
+                name: "Bijoy Sen (Neel)",
+                role: "Creative Director & Lead Biographer",
+                credentials: "Former Business Journalist & Publisher",
+                bio: "With over 18 years documenting India's industrial transformations, Bijoy leads editorial curation for every monograph, matching narrative voice with your corporate values.",
+              },
+              {
+                name: "Dr. Meera Nair",
+                role: "Head of Archival Research",
+                credentials: "PhD in Industrial History (Oxford)",
+                bio: "Meera leads our research team in scanning and restoring legacy corporate records, cataloging corporate assets, and verifying historical facts to ensure museum-grade accuracy.",
+              },
+              {
+                name: "Siddharth Roy",
+                role: "Director of Cinema Production",
+                credentials: "National-Award Winning Documentarian",
+                bio: "Siddharth oversees cinematic oral history interviews. His media production house compiles high-definition video archives and directs the Cinematic Documentary Option.",
+              },
+            ].map((member, idx) => (
+              <div key={idx} className="border border-white/5 bg-secondary/20 p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase tracking-widest text-accent font-semibold block">
+                    {member.role}
+                  </span>
+                  <h3 className="font-heading text-xl font-medium text-white tracking-wide">
+                    {member.name}
+                  </h3>
+                  <p className="text-xs italic text-muted font-sans font-light">
+                    {member.credentials}
+                  </p>
+                </div>
+                <p className="text-xs leading-relaxed text-muted font-sans font-light pt-2 border-t border-white/5">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Commission Deliverables Breakdown */}
       <section aria-labelledby="deliverables-title" className="py-24 lg:py-32 bg-background border-t border-white/5 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -438,27 +512,51 @@ export default function FounderBook() {
             {[
               {
                 title: "Archival Research & Matchmaking",
-                desc: "We align your project with a senior biographer and corporate archivist matching your industry. Includes bilateral NDA execution and archive security protocols.",
+                desc: (
+                  <>
+                    <strong>Bespoke alignment</strong> with a senior biographer matching your industry. Includes <strong>NDA execution</strong> and archive setup.
+                  </>
+                ),
               },
               {
                 title: "Oral Histories & Transcripts",
-                desc: "Up to 40 hours of recorded biographical interviews. We deliver complete audio recordings and digital transcripts, fully owned by your company.",
+                desc: (
+                  <>
+                    Up to <strong>40 hours</strong> of recorded interviews. We deliver full audio and <strong>digital transcripts</strong> owned entirely by you.
+                  </>
+                ),
               },
               {
                 title: "Document Indexing & Scanning",
-                desc: "High-resolution digitizing, indexing, and digital restoration of up to 1,000 legacy records, historical photographs, maps, and engineering letters.",
+                desc: (
+                  <>
+                    High-resolution digital restoration and indexing of up to <strong>1,000 legacy records</strong>, blueprints, and historic photos.
+                  </>
+                ),
               },
               {
                 title: "Two Editorial Revision Cycles",
-                desc: "Complete structural review and two full rounds of manuscript copy-editing. You retain final authority over all historical facts.",
+                desc: (
+                  <>
+                    <strong>Two comprehensive rounds</strong> of copy-editing. You retain <strong>final sign-off authority</strong> over all historical facts.
+                  </>
+                ),
               },
               {
                 title: "Five (5) Hand-Bound Volumes",
-                desc: "Five heirloom copies printed on 150 GSM pH-neutral acid-free Ivory paper, Smyth-sewn, wrapped in full-grain Italian leather, delivered in silk clamshell cases.",
+                desc: (
+                  <>
+                    <strong>Five heirloom volumes</strong> printed on <strong>150 GSM acid-free Ivory paper</strong>, hand-wrapped in Italian leather with silk clamshells.
+                  </>
+                ),
               },
               {
                 title: "Print-Ready Digital Archives",
-                desc: "We supply a secure, encrypted flash drive containing high-res PDFs of the typeset book, print-ready files, and your indexed digital files.",
+                desc: (
+                  <>
+                    An encrypted flash drive containing <strong>print-ready files, typeset PDFs, and your complete digital archives</strong>.
+                  </>
+                ),
               },
             ].map((d, idx) => (
               <motion.div

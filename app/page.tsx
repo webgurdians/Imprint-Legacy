@@ -338,7 +338,7 @@ export default function Home() {
             "Your company history is more than a marketing asset. It is the definitive constitution of your corporate longevity."
           </p>
           <div className="flex flex-col items-center gap-y-2">
-            <span className="text-2xs uppercase tracking-[0.25em] text-accent">Creative Director, Imprint Legacy</span>
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent">Bijoy Sen, Creative Director</span>
             <div className="h-[1px] w-12 bg-accent/40 my-3" />
             <Link
               href="/apply"
