@@ -4,6 +4,73 @@ import Link from "next/link";
 import { FileText, Calendar, ArrowRight, ShieldAlert, Award, FileCode } from "lucide-react";
 import { motion } from "framer-motion";
 
+const caseStudiesJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://imprintlegacy.in/case-studies/#webpage",
+      "url": "https://imprintlegacy.in/case-studies",
+      "name": "Corporate Monograph Case Studies | Imprint Legacy",
+      "description": "An index of corporate monograph projects securing the history and heritage of family enterprises and tech companies.",
+      "publisher": {
+        "@id": "https://imprintlegacy.in/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Imprint Legacy Monograph Case Studies",
+      "numberOfItems": 2,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "headline": "The Singhania Dynastic Chronicle",
+            "alternativeHeadline": "Preserving 80 Years of Industrial Growth Across Four Generations",
+            "description": "How Imprint Legacy recorded 42 oral histories and digitized 1,200 physical letters to codify the Singhania partnership ethos.",
+            "author": {
+              "@type": "Organization",
+              "name": "Imprint Legacy"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Imprint Legacy",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://imprintlegacy.in/logo.png"
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "headline": "The CloudCore Genesis Project",
+            "alternativeHeadline": "Documenting the Hyper-growth and Pivots of a SaaS Pioneer",
+            "description": "Preserving CloudCore's early founding narrative, pivotal shifts, and engineering grit into a linen-bound textbook for culture preservation.",
+            "author": {
+              "@type": "Organization",
+              "name": "Imprint Legacy"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Imprint Legacy",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://imprintlegacy.in/logo.png"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -55,6 +122,10 @@ export default function CaseStudies() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesJsonLd) }}
+      />
       {/* Header */}
       <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary via-background to-background border-b border-white/5">
         <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center space-y-6">

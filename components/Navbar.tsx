@@ -40,6 +40,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={`relative font-sans text-xs uppercase tracking-[0.15em] transition-colors duration-300 py-1 hover:text-white focus:outline-none ${
                     isActive ? "text-white" : "text-muted"
                   }`}
@@ -104,6 +105,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
                     className={`block py-3 font-sans text-xs uppercase tracking-[0.15em] transition-colors focus:outline-none ${
                       isActive ? "text-accent" : "text-muted hover:text-white"
                     }`}
