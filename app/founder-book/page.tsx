@@ -460,10 +460,10 @@ export default function FounderBook() {
                 bio: "With over 18 years documenting India's industrial transformations, Bijoy leads editorial curation for every monograph, matching narrative voice with your corporate values.",
               },
               {
-                name: "Dr. Meera Nair",
+                name: "Rishita Saha",
                 role: "Head of Archival Research",
-                credentials: "PhD in Industrial History (Oxford)",
-                bio: "Meera leads our research team in scanning and restoring legacy corporate records, cataloging corporate assets, and verifying historical facts to ensure museum-grade accuracy.",
+                credentials: "Senior Corporate Archivist & Historical Curation Fellow",
+                bio: "Rishita leads our research team in scanning and restoring legacy corporate records, cataloging corporate assets, and verifying historical facts to ensure museum-grade accuracy.",
               },
               {
                 name: "Prasenjit Dutta",
