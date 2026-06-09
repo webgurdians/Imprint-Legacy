@@ -195,6 +195,147 @@ export default function FounderBook() {
         </div>
       </section>
 
+      {/* The Curation Process (4-Phases Timeline) */}
+      <section aria-labelledby="curation-process" className="py-24 lg:py-32 bg-secondary border-t border-white/5 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+              Behind the Scenes
+            </span>
+            <h2 id="curation-process" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
+              The Curation <span className="text-accent italic">Process</span>
+            </h2>
+            <p className="text-xs text-muted max-w-lg mx-auto font-sans leading-relaxed">
+              Crafting an archival corporate monograph requires meticulous historical research, extensive interviews, and custom publication design. We divide each commission into four transparent phases:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            {/* Timeline Line (for larger screens) */}
+            <div className="hidden md:block absolute top-[2.5rem] left-[1.5rem] right-[1.5rem] h-[1px] bg-white/5 z-0" />
+            
+            {[
+              {
+                phase: "Phase 1",
+                duration: "Weeks 1–4",
+                title: "Intake & Strategy",
+                desc: "We assign a designated corporate biographer, align on the thematic scope, map out the historical chapters, and execute a formal bilateral NDA.",
+              },
+              {
+                phase: "Phase 2",
+                duration: "Weeks 5–12",
+                title: "Oral History & Archiving",
+                desc: "Conducting up to 40 hours of recorded interviews with key founders, board members, and executives while digitizing letters, blueprints, and historic ledgers.",
+              },
+              {
+                phase: "Phase 3",
+                duration: "Weeks 13–20",
+                title: "Writing & Composition",
+                desc: "Drafting the narrative, validating facts with our archivist team, executing two rounds of revisions, and layout typesetting in traditional serif fonts.",
+              },
+              {
+                phase: "Phase 4",
+                duration: "Weeks 21–28",
+                title: "Binding & Presentation",
+                desc: "Traditional Smyth-sewn paper stitching, wrapping the hand-made boards in calfskin leather or library linen, gold leaf engraving, and custom slipcase delivery.",
+              },
+            ].map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                className="relative z-10 space-y-4 md:pt-12"
+              >
+                {/* Node indicator */}
+                <div className="flex items-center gap-4 md:block">
+                  <div className="flex h-10 w-10 items-center justify-center border border-accent bg-[#0A0A0A] rounded-none text-2xs uppercase tracking-widest text-accent font-semibold">
+                    0{idx + 1}
+                  </div>
+                  <div className="md:hidden h-[1px] flex-grow bg-white/5" />
+                  <span className="text-[10px] uppercase tracking-widest text-accent font-medium md:block md:mt-4">
+                    {step.phase} &bull; {step.duration}
+                  </span>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="font-heading text-lg font-medium text-white tracking-wide">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                    {step.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commission Deliverables Breakdown */}
+      <section aria-labelledby="deliverables-title" className="py-24 lg:py-32 bg-background border-t border-white/5 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+              Project Scope
+            </span>
+            <h2 id="deliverables-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
+              What Every Commission <span className="text-accent italic">Includes</span>
+            </h2>
+            <p className="text-xs text-muted max-w-lg mx-auto font-sans leading-relaxed">
+              We deliver a complete, turn-key publishing service. Every contract covers our comprehensive research, editorial, and physical production assets:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Archival Research & Matchmaking",
+                desc: "We align your project with a senior biographer and corporate archivist matching your industry. Includes bilateral NDA execution and archive security protocols.",
+              },
+              {
+                title: "Oral Histories & Transcripts",
+                desc: "Up to 40 hours of recorded biographical interviews. We deliver complete audio recordings and digital transcripts, fully owned by your company.",
+              },
+              {
+                title: "Document Indexing & Scanning",
+                desc: "High-resolution digitizing, indexing, and digital restoration of up to 1,000 legacy records, historical photographs, maps, and engineering letters.",
+              },
+              {
+                title: "Two Editorial Revision Cycles",
+                desc: "Complete structural review and two full rounds of manuscript copy-editing. You retain final authority over all historical facts.",
+              },
+              {
+                title: "Five (5) Hand-Bound Volumes",
+                desc: "Five heirloom copies printed on 150 GSM pH-neutral acid-free Ivory paper, Smyth-sewn, wrapped in full-grain Italian leather, delivered in silk clamshell cases.",
+              },
+              {
+                title: "Print-Ready Digital Archives",
+                desc: "We supply a secure, encrypted flash drive containing high-res PDFs of the typeset book, print-ready files, and your indexed digital files.",
+              },
+            ].map((d, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="border border-white/5 bg-secondary/10 p-8 rounded-none hover:border-accent/20 transition-all duration-300 space-y-3 text-left"
+              >
+                <div className="h-1.5 w-1.5 bg-accent" />
+                <h3 className="font-heading text-base font-medium text-white tracking-wide">
+                  {d.title}
+                </h3>
+                <p className="text-xs leading-relaxed text-muted font-sans font-light">
+                  {d.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Investment Block (Filter Lead) */}
       <section className="py-20 lg:py-28 bg-secondary border-t border-white/5 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent pointer-events-none" />

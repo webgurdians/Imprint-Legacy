@@ -88,7 +88,30 @@ export default function TermsAndConditions() {
 
             <div className="space-y-3">
               <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-                4. Absolute Confidentiality Obligations
+                4. Intellectual Property & Copyright Ownership
+              </h2>
+              <p>
+                We enforce clear boundary guidelines regarding proprietary content and creative creative outputs:
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Client Archives:</strong> The client retains exclusive ownership and all intellectual property rights for all raw corporate records, letters, logos, and historical materials supplied to us.
+                </li>
+                <li>
+                  <strong>Manuscript & Narratives:</strong> Complete copyright ownership of the finished compiled narrative text is transferred in full to the client upon receipt of the final Milestone Payment.
+                </li>
+                <li>
+                  <strong>Recordings & Transcripts:</strong> Exclusive ownership of all biographer oral history recordings and text transcripts is transferred to the client upon completion of the draft phase, to be kept as private client archives.
+                </li>
+                <li>
+                  <strong>Future Reproduction:</strong> The client holds full future reproduction and reprint rights, enabling them to print additional copies through Imprint Legacy or any third-party printer at their sole discretion.
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                5. Absolute Confidentiality Obligations
               </h2>
               <p>
                 Given that founders and legacy companies share sensitive personal and commercial details, we operate under strict data-handling policies:
@@ -105,7 +128,7 @@ export default function TermsAndConditions() {
 
             <div className="space-y-3">
               <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-                5. Material & Binding Specifications
+                6. Material & Binding Specifications
               </h2>
               <p>
                 Each monograph is produced to exceed national library preservation standards:
