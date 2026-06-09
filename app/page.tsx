@@ -1,11 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, ShieldCheck, Award } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, BookOpen, ShieldCheck, Award, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "Who writes and compiles the corporate monographs?",
+      answer: "We deploy a dedicated team of senior business biographers, oral historians, and research archivists. They conduct structured in-person interviews and index corporate records, catalogs, and media archives to write the narrative.",
+    },
+    {
+      question: "What is the typical timeline for a publishing commission?",
+      answer: "A standard monograph commission takes between 6 to 9 months. This timeline accounts for comprehensive oral history capture, archival research, copy editing, layout design, and hand-finished physical binding.",
+    },
+    {
+      question: "How do you handle confidentiality and sensitive trade secrets?",
+      answer: "We govern all projects under strict, legally binding corporate NDAs. Drafts are held on secure private directories, and under no circumstances is any portion of the monograph shared publicly without explicit written board clearance.",
+    },
+    {
+      question: "Can we request additional book copies for distribution?",
+      answer: "Yes. While a standard commission includes five bespoke, leather-bound archival volumes in custom clamshell cases, we can organize additional print runs (both luxury and standard linen finishes) for partners or stakeholders.",
+    },
+    {
+      question: "Do you collaborate with international organizations?",
+      answer: "Yes. Our editorial and archive research teams are fully equipped to travel internationally to conduct oral histories and secure key physical archives directly at your global offices.",
+    },
+  ];
+
   const fadeIn = {
     hidden: { opacity: 0, y: 15 },
     visible: (custom: number) => ({
@@ -233,6 +259,60 @@ export default function Home() {
               </div>
             </motion.article>
 
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section aria-labelledby="faq-title" className="py-24 lg:py-32 relative bg-[#0D0D0D] border-t border-white/5">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold block">
+              Inquiries & Process
+            </span>
+            <h2 id="faq-title" className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight">
+              Frequently Asked <span className="text-accent italic">Questions</span>
+            </h2>
+          </div>
+
+          <div className="space-y-6 font-sans">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div key={idx} className="border-b border-white/5 pb-6">
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="flex w-full items-center justify-between text-left focus:outline-none group"
+                  >
+                    <span className="text-sm font-medium text-white group-hover:text-accent transition-colors duration-300">
+                      {faq.question}
+                    </span>
+                    <span className="ml-6 flex h-7 items-center">
+                      <ChevronDown
+                        className={`h-4 w-4 text-accent transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </span>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="mt-4 text-xs leading-relaxed text-muted font-light">
+                          {faq.answer}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -94,7 +94,16 @@ export default function Footer() {
           <p className="text-2xs tracking-[0.05em] text-muted">
             &copy; {new Date().getFullYear()} Imprint Legacy. All rights reserved.
           </p>
-          <div className="flex gap-x-6 text-2xs text-muted">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-2xs text-muted">
+            <Link href="/privacy" className="hover:text-white transition-colors duration-300">
+              Privacy Policy
+            </Link>
+            <Link href="/return-policy" className="hover:text-white transition-colors duration-300">
+              Return Policy
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors duration-300">
+              Terms & Conditions
+            </Link>
             <span className="text-muted/60">Strictly Private Editions</span>
             <span className="text-muted/60">By Invitation Only</span>
           </div>
