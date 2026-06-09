@@ -21,7 +21,7 @@ export default function TermsAndConditions() {
         <article className="space-y-10">
           <header className="space-y-4 border-b border-white/5 pb-8">
             <span className="text-2xs uppercase tracking-[0.25em] text-accent font-semibold">
-              Legal Commissions Framework
+              Bespoke Publishing Agreement Framework
             </span>
             <h1 className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
               Terms & Conditions
@@ -31,41 +31,103 @@ export default function TermsAndConditions() {
             </p>
           </header>
 
-          <section className="space-y-6 font-sans text-sm font-light leading-relaxed text-muted">
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              1. Commission Services
-            </h2>
-            <p>
-              By applying for and funding a publishing commission with Imprint Legacy, you contract for our bespoke corporate historical curation, biographical research, layout design, and hand-binding services.
-            </p>
+          <section className="space-y-8 font-sans text-sm font-light leading-relaxed text-muted">
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                1. Retainer & Commission Framework
+              </h2>
+              <p>
+                Bespoke publishing commissions are billed on a structured milestone basis (Retainer, Draft Completion, and Print Release). 
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Cancellations:</strong> The initial commencement retainer is non-refundable once biographical research or interviews begin, covering biographer allocation and indexing. However, if Imprint Legacy terminates the commission without cause, the retainer is fully refunded.
+                </li>
+                <li>
+                  <strong>Pauses & Delays:</strong> If the client requests a project pause exceeding 90 consecutive days, the commission is placed on hold. Reactivation is subject to biographer availability and a 10% administrative reactivation fee.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              2. Intake Evaluation
-            </h2>
-            <p>
-              Due to publishing calendar constraints, all commission requests are subject to editorial review by our Creative Director. We reserve the right to reject any application for any reason, including schedule conflicts or thematic alignment.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                2. Delivery Guarantees & SLA
+              </h2>
+              <p>
+                While final delivery timelines depend on timely access to historical documents and key stakeholders, we operate under strict service-level commitments:
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Manuscript Window:</strong> We commit to delivering the initial complete manuscript draft within 180 days of obtaining primary stakeholder interviews.
+                </li>
+                <li>
+                  <strong>Remedies for Delay:</strong> If a delay is caused solely by Imprint Legacy exceeding this window by more than 45 days, the client is entitled to a 5% discount on the final print release milestone, or two (2) additional complimentary leather-bound volumes.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              3. Copyright and Ownership
-            </h2>
-            <p>
-              Unless explicitly negotiated otherwise, you retain complete proprietary ownership of any corporate archives, trademarks, and records supplied to us. Upon final delivery and full payment settlement, the copyright of the custom compiled narrative text is transferred in full to the commissioning entity.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                3. Revision Cycle & Editorial Disagreement
+              </h2>
+              <p>
+                Every commission includes **two (2) rounds of comprehensive structural and editorial revisions** on the drafted manuscript prior to page layout.
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Factual Accuracy:</strong> The client retains absolute and final authority regarding all historical and biographical facts.
+                </li>
+                <li>
+                  <strong>Aesthetic Disagreements:</strong> Imprint Legacy retains final authority on matters of graphic design, typesetting, and print execution to maintain our high binding standards.
+                </li>
+                <li>
+                  <strong>Final Proof Sign-off:</strong> The client must provide a signed, written approval of the final digital layout proof. No alterations can be made once printing and cover engraving begin.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              4. Payment & Milestones
-            </h2>
-            <p>
-              Bespoke commissions are billed on a structured milestone basis: a non-refundable commencement retainer, a drafting milestone, and a final print release payment. Delivery schedules depend on prompt access to stakeholders and historical documentation.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                4. Absolute Confidentiality Obligations
+              </h2>
+              <p>
+                Given that founders and legacy companies share sensitive personal and commercial details, we operate under strict data-handling policies:
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>NDA Execution:</strong> A comprehensive bilateral Non-Disclosure Agreement (NDA) is executed prior to the exchange of any archives or the commencement of oral interviews.
+                </li>
+                <li>
+                  <strong>Data Handling:</strong> All raw recordings, transcript files, and drafts are hosted on secure, offline-capable encrypted local storage systems accessible only by your designated biography team.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              5. Governing Law
-            </h2>
-            <p>
-              These Terms and any individual commission contracts are governed and construed in accordance with the laws of India. Any legal disputes arising under these terms are subject to the exclusive jurisdiction of the courts of Kolkata, India.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                5. Material & Binding Specifications
+              </h2>
+              <p>
+                Each monograph is produced to exceed national library preservation standards:
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Paper:</strong> 150 GSM pH-neutral, acid-free cotton-blend archival paper (consistently Ivory).
+                </li>
+                <li>
+                  <strong>Binding:</strong> Traditional Smyth-sewn construction using reinforced cotton stitching (guaranteed lie-flat).
+                </li>
+                <li>
+                  <strong>Covers:</strong> Hand-wrapped, full-grain Italian calfskin leather or premium grade-A library linen with hot-stamped 24k gold leaf foil details.
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3 pt-4 border-t border-white/5">
+              <p className="text-xs italic text-muted">
+                Note: The above public terms serve as our standard operating framework. Every commission is governed by a separate, detailed bilateral Commission Agreement signed by authorized representatives of both parties prior to any billing.
+              </p>
+            </div>
           </section>
         </article>
       </div>

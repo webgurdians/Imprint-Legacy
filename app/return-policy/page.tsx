@@ -24,56 +24,78 @@ export default function ReturnPolicy() {
               Bespoke Quality Guarantees
             </span>
             <h1 className="font-heading text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
-              Return Policy
+              Return & Replacement Policy
             </h1>
             <p className="text-2xs text-muted uppercase tracking-widest font-sans">
               Last Updated: June 10, 2026
             </p>
           </header>
 
-          <section className="space-y-6 font-sans text-sm font-light leading-relaxed text-muted">
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              1. Bespoke Craftsmanship Disclaimer
-            </h2>
-            <p>
-              Every Imprint Legacy monograph is a custom-made work, tailored specifically to the historical records and details of the commissioning client. Due to the highly personalized nature of archival research, custom typesetting, and hand-bound printmaking, **we do not support standard cancellations, returns, or refunds** once work has commenced.
-            </p>
+          <section className="space-y-8 font-sans text-sm font-light leading-relaxed text-muted">
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                1. Custom Craftsmanship Notice
+              </h2>
+              <p>
+                Each Imprint Legacy monograph is individually curated, typeset, and hand-bound. Because these volumes are custom-crafted using your organization's private archives and oral histories, **all sales are final**. We do not support cancellations, changes, or refunds once printing plates have been created and binding boards have been wrapped.
+              </p>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              2. Approval Milestones
-            </h2>
-            <p>
-              To ensure absolute satisfaction, we establish multiple strict approval milestones during the commission process:
-            </p>
-            <ul className="list-disc list-inside pl-4 space-y-2">
-              <li>**Structural Outline Approval:** Before writing commences.</li>
-              <li>**Manuscript Sign-off:** Before typesetting and cover design layouts.</li>
-              <li>**Proof Verification:** A complete digital or linen-proof layout verification before final hot-stamping and leather binding.</li>
-            </ul>
-            <p>
-              Your physical volumes are only produced after your team signs off on the final print proofs.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                2. Proof Verification Milestone
+              </h2>
+              <p>
+                To prevent errors, clients are required to approve a physical linen-bound proof or a high-resolution digital layout proof before we begin final print production. 
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Editorial Scope:</strong> Factual or editorial errors that were present in the approved proof are not grounds for a refund or replacement.
+                </li>
+                <li>
+                  <strong>Production Agreement:</strong> Your final print release signature indicates complete approval of all content, typography, and image placement.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              3. Damages and Defects
-            </h2>
-            <p>
-              We stand by our 200-year archival guarantee. If any physical volume arrives with manufacturing defects, shipping damages, or binding anomalies, please notify your project manager within 7 business days of delivery. We will immediately arrange for the damaged volume to be returned and replace it with a hand-bound replacement free of charge.
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                3. Manufacturing Defect Replacements
+              </h2>
+              <p>
+                We stand by our 200-year archival materials guarantee. If your custom volumes arrive with defects in manufacturing, assembly, or shipping damage, we will replace them in full:
+              </p>
+              <ul className="list-disc list-inside pl-4 space-y-1">
+                <li>
+                  <strong>Reporting Window:</strong> Any manufacturing anomalies (e.g., loose binding stitching, pages binding out of sequence, leather tears, foil hot-stamping smudges, or shipping indentations) must be reported to your project manager within **30 calendar days** of delivery.
+                </li>
+                <li>
+                  <strong>Remedy:</strong> Upon verification of the defect, we will reproduce and bind a replacement volume matching your original specifications at our own cost. Defective volumes must be returned to us for recycling and verification.
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="font-heading text-xl font-medium text-white tracking-wide">
-              4. Contact Us
-            </h2>
-            <p>
-              If you have any questions regarding your commission specifications, please reach out to your designated account manager or email us directly at:
-              <br />
-              <a
-                href="mailto:editorial@imprintlegacy.in"
-                className="text-accent hover:underline mt-2 inline-block"
-              >
-                editorial@imprintlegacy.in
-              </a>
-            </p>
+            <div className="space-y-3">
+              <h2 className="font-heading text-xl font-medium text-white tracking-wide">
+                4. Print Run Discrepancies
+              </h2>
+              <p>
+                For commissions involving large print runs (for stakeholder gifting or distribution), we verify the exact copy count before shipping. Any shortages in the final delivery will be rectified immediately by shipping the missing quantity or adjusting the final invoice proportionally.
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-4 border-t border-white/5">
+              <p className="text-xs italic text-muted">
+                Questions? For assistance with delivery audits or physical volume replacements, please reach out to your designated account manager or email our printmaking department at:
+                <br />
+                <a
+                  href="mailto:editorial@imprintlegacy.in"
+                  className="text-accent hover:underline mt-2 inline-block font-sans not-italic"
+                >
+                  editorial@imprintlegacy.in
+                </a>
+              </p>
+            </div>
           </section>
         </article>
       </div>
