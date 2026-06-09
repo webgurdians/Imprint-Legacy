@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "Archival corporate memoirs",
   ],
   authors: [{ name: "Imprint Legacy" }],
+  verification: {
+    google: "e9yUYmBLuJf4Yu1SmPFutkynYtZsgkve3k9cKruo63k",
+  },
   openGraph: {
     title: "Imprint Legacy | B2B Corporate Legacy & Autobiography Publishing",
     description:
